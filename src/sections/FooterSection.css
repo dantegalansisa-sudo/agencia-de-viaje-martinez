@@ -1,0 +1,169 @@
+/* ===== FOOTER ===== */
+.footer {
+  padding: 80px 0 40px;
+  background: var(--color-navy);
+  color: white;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+/* Brand */
+.footer__logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer__logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background: white;
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.footer__logo-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+
+.footer__tagline {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+  max-width: 280px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__social-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-green-vivid);
+  padding: 6px 16px;
+  border: 1px solid rgba(124, 179, 66, 0.3);
+  border-radius: 100px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer__social-link:hover {
+  background: var(--color-green);
+  color: white;
+}
+
+/* Columns */
+.footer__col-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__links a,
+.footer__links span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: var(--color-green-vivid);
+}
+
+/* CESDN badge */
+.footer__cesdn {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+/* Bottom */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer__bottom a {
+  color: var(--color-green-vivid);
+  font-weight: 600;
+}
+
+.footer__bottom a:hover {
+  color: var(--color-green);
+}
+
+/* Legal — última fila del footer */
+.footer__legal {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__legal-link {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.footer__legal-link:hover {
+  color: white;
+  border-color: var(--color-green-vivid);
+  background: rgba(124, 179, 66, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}

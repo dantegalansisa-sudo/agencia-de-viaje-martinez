@@ -1,0 +1,113 @@
+/* ===== PAYMENT SECTION ===== */
+.payment {
+  padding: var(--section-padding);
+  background: var(--color-navy);
+  color: white;
+}
+
+.payment__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Text side */
+.payment__text .section-eyebrow {
+  color: var(--color-green-vivid) !important;
+}
+
+.payment__text .section-title {
+  color: white !important;
+}
+
+.payment__text .section-subtitle {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.payment__highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 20px;
+  background: rgba(124, 179, 66, 0.1);
+  border: 1px solid rgba(124, 179, 66, 0.25);
+  border-radius: 14px;
+}
+
+.payment__highlight-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.payment__highlight strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-green-vivid);
+  margin-bottom: 4px;
+}
+
+.payment__highlight span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Cards grid */
+.payment__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.payment__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.payment__card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(124, 179, 66, 0.3);
+  transform: translateY(-2px);
+}
+
+.payment__card-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.payment__card-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.payment__card-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .payment__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,188 @@
+/* ===== FLIGHT & HOTEL OFFERS ===== */
+.flights {
+  padding: var(--section-padding);
+  background: var(--color-bg-surface);
+}
+
+/* ===== TABS ===== */
+.flights__tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.flights__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: white;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.flights__tab:hover {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+}
+
+.flights__tab--active {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: white;
+  box-shadow: 0 4px 16px rgba(26, 35, 126, 0.15);
+}
+
+.flights__tab-icon {
+  font-size: 16px;
+}
+
+/* ===== LIST ===== */
+.flights__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== FLIGHT / HOTEL ROW ===== */
+.flight-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto auto auto;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 28px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background: white;
+  transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.flight-row:hover {
+  border-color: var(--color-border-green);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Flag */
+.flight-row__flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flight-row__flag-img {
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* City / Hotel name */
+.flight-row__city {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.flight-row__city strong {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+/* Dest code badge */
+.flight-row__dest-code {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: 1px;
+  background: var(--color-bg-elevated);
+  padding: 4px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* Hotel location subtitle */
+.hotel-row__location {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* Stars */
+.hotel-row__stars {
+  display: flex;
+  gap: 1px;
+}
+
+.hotel-row__star {
+  color: var(--color-gold);
+  font-size: 14px;
+}
+
+/* Price */
+.flight-row__price {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+/* CTA */
+.flight-row__cta {
+  background: var(--gradient-green);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s;
+}
+
+.flight-row__cta:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .flights__tabs {
+    gap: 6px;
+  }
+  .flights__tab {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .flights__tab-icon {
+    font-size: 14px;
+  }
+  .flight-row {
+    grid-template-columns: 36px 1fr auto;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+  .flight-row__dest-code {
+    display: none;
+  }
+  .hotel-row__stars {
+    display: none;
+  }
+  .flight-row__cta {
+    display: none;
+  }
+  .flight-row__city {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,219 @@
+/* ===== TEAM SECTION ===== */
+.team {
+  padding: var(--section-padding);
+  background: var(--color-bg-surface);
+}
+
+.team__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.team__header .section-eyebrow {
+  display: block;
+}
+
+.team__header .section-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team__header .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* Content wrapper */
+.team__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Grid for regular members */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Card */
+.team-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-green);
+}
+
+/* Leadership card — horizontal layout */
+.team-card--leadership {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.team-card--leadership .team-card__image-wrap {
+  height: 100%;
+  min-height: 400px;
+}
+
+.team-card--leadership .team-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.team-card--leadership .team-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Member block (for multi-person cards) */
+.team-card__member {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.team-card__member:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 16px;
+  border-bottom: none;
+}
+
+.team-card__member .team-card__bio {
+  margin-bottom: 0;
+}
+
+/* Image */
+.team-card__image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-card__image {
+  transform: scale(1.03);
+}
+
+.team-card__image-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, white 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.team-card--leadership .team-card__image-accent {
+  display: none;
+}
+
+/* Body */
+.team-card__body {
+  padding: 28px 32px 36px;
+}
+
+.team-card__role {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-green);
+  background: var(--color-green-glow);
+  border: 1px solid var(--color-border-green);
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.team-card__name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.team-card__bio {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.team-card__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-navy);
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  transition: all 0.3s;
+}
+
+.team-card__social:hover {
+  background: var(--color-navy);
+  color: white;
+  border-color: var(--color-navy);
+}
+
+.team-card__social svg {
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-card--leadership {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card--leadership .team-card__image-wrap {
+    min-height: auto;
+  }
+
+  .team-card--leadership .team-card__image {
+    height: auto;
+    object-fit: initial;
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .team-card__body {
+    padding: 24px 24px 32px;
+  }
+
+  .team-card__name {
+    font-size: 20px;
+  }
+}

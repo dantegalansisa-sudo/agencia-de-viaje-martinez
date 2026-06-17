@@ -1,0 +1,154 @@
+/* ===== HERO — SEARCH-FIRST LAYOUT ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0b1024;
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+.hero__video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(11, 16, 36, 0.88) 0%,
+    rgba(17, 24, 54, 0.8) 40%,
+    rgba(15, 21, 48, 0.7) 100%
+  );
+}
+
+/* ===== CONTENT — centered, widget-first ===== */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  padding: 5px 14px 5px 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.hero__badge-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Title — compact one-liner */
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero__title-accent {
+  color: var(--color-green);
+}
+
+/* Sub — single line */
+.hero__sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+/* Trust micro-copy */
+.hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.hero__trust-item svg {
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  /* Mayor especificidad (.hero .hero__content) para que este padding
+     gane sobre el de .section-container y el contenido del hero no
+     quede tapado por el navbar fijo. */
+  .hero .hero__content {
+    padding-top: 130px;
+    padding-bottom: 44px;
+  }
+
+  .hero__badge {
+    margin-bottom: 16px;
+  }
+
+  .hero__title {
+    font-size: clamp(24px, 6.5vw, 36px);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .hero__sub {
+    font-size: 14px;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero__trust {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 22px;
+  }
+}
